@@ -1,11 +1,11 @@
 package com.fasttrackit.smokeTest.steps;
 
-import com.fasttrackit.smokeTest.pages.HomePage;
+import com.fasttrackit.smokeTest.pages.HeaderPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
 public class SmokeSteps extends ScenarioSteps {
-    HomePage homePage;
+    HeaderPage homePage;
 
 
     @Step
@@ -41,4 +41,6 @@ public class SmokeSteps extends ScenarioSteps {
         homePage.clickAccessContact();
     }
 
+    @Step
+    public void goToClickOnFaq(){homePage.clickFaq();}
 }

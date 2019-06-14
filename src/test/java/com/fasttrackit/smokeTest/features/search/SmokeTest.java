@@ -2,6 +2,7 @@ package com.fasttrackit.smokeTest.features.search;
 
 
 import com.fasttrackit.smokeTest.steps.SmokeSteps;
+import com.fasttrackit.smokeTest.steps.serenity.FaqSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -19,16 +20,17 @@ public class SmokeTest {
     public WebDriver webdriver;
 
 
-  @BeforeClass
-  public static void maximise(){
-      getDriver().manage().window().maximize();
-  }
+    @BeforeClass
+    public static void maximise() {
+        getDriver().manage().window().maximize();
+    }
 
     @Steps
     private SmokeSteps smokeSteps;
+    private FaqSteps faqSteps;
 
     @Test
-    public void successfulSmokeTest(){
+    public void successfulSmokeTest() {
 
         smokeSteps.goToPage();
         smokeSteps.goToAccessCursuri();
@@ -42,7 +44,7 @@ public class SmokeTest {
         smokeSteps.goToAccessCursuri();
         smokeSteps.goToClickOnTestare();
         smokeSteps.goToContacts();
-
     }
+
 
 }
